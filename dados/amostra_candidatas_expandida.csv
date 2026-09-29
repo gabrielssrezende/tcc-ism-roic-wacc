@@ -1,0 +1,43 @@
+﻿ticker,cik,nome,exchange,sic,sic_desc,n_10k_2015_2024,anos_10k,perfil_ism_esperado,incluir,motivo,evidencia
+ADBE,796343,ADOBE INC.,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+APPN,1441683,APPIAN CORP,Nasdaq,7372,Services-Prepackaged Software,7.0,"2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+BLKB,1280058,BLACKBAUD INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+CDNS,813672,CADENCE DESIGN SYSTEMS INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+CRWD,1535527,"CrowdStrike Holdings, Inc.",Nasdaq,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",alto,sim,,Assinatura > 90% da receita; aquisições de pequeno porte
+DDOG,1561550,"Datadog, Inc.",Nasdaq,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",alto,sim,,10-K: 'substantially all of our revenue is from subscription software sales'
+DT,1773383,"Dynatrace, Inc.",NYSE,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",medio,sim,,
+ESTC,1707753,Elastic N.V.,NYSE,7372,Services-Prepackaged Software,6.0,"2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+FIVN,1288847,"Five9, Inc.",Nasdaq,7374,Services-Computer Processing & Data Preparation,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+HUBS,1404655,HUBSPOT INC,NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+MDB,1441816,"MongoDB, Inc.",Nasdaq,7372,Services-Prepackaged Software,7.0,"2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+NET,1477333,"Cloudflare, Inc.",NYSE,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",medio,sim,,10-K: receita 'primarily from subscriptions'; componente variável restrito a banda excedente
+NOW,1373715,"ServiceNow, Inc.",NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,Assinatura > 90% da receita; sem M&A relevante; market cap > USD 500 mi em todo o período
+PAYC,1590955,"Paycom Software, Inc.",NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+PCTY,1591698,Paylocity Holding Corp,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+PRGS,876167,PROGRESS SOFTWARE CORP /MA,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+PTC,857005,PTC INC.,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+QLYS,1107843,"QUALYS, INC.",Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+RPD,1560327,"Rapid7, Inc.",Nasdaq,7372,Services-Prepackaged Software,9.0,"2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+SMAR,1366561,SMARTSHEET INC,sem listagem atual (verificar NYSE/Nasdaq no período),7372,Services-Prepackaged Software,6.0,"2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,"Assinatura de 94% da receita no FY2024; capital fechado em jan/2025, após o período"
+SNPS,883241,SYNOPSYS INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,"Time-based 57,9% + manutenção 17,6% = 75,5% da receita (FY2023); aquisição da Ansys concluída em jul/2025, fora do período"
+SPSC,1092699,SPS COMMERCE INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+TENB,1660280,"Tenable Holdings, Inc.",Nasdaq,7372,Services-Prepackaged Software,6.0,"2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+VEEV,1393052,VEEVA SYSTEMS INC,NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,sim,,
+WDAY,1327811,"Workday, Inc.",Nasdaq,7374,Services-Computer Processing & Data Preparation,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,sim,,
+ZS,1713683,"Zscaler, Inc.",Nasdaq,7371,Services-Computer Programming Services,7.0,"2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,sim,,
+ANSS,1013462,ANSYS INC,sem listagem atual (verificar NYSE/Nasdaq no período),7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,"Despesa de S&M não divulgada separadamente (DRE apresenta SG&A agregado), inviabilizando o cálculo do IS&M","DRE GAAP, FY2023"
+BILL,1786352,"BILL Holdings, Inc.",NYSE,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",medio,nao,Receita assinatura < 60%: receitas de transação/pagamento representam ~70-75% do total,
+CDAY,1725057,"Dayforce, Inc.",sem listagem atual (verificar NYSE/Nasdaq no período),7372,Services-Prepackaged Software,6.0,"2019, 2020, 2021, 2022, 2023, 2024",medio,nao,"Despesa de S&M divulgada separadamente apenas a partir de 2021 (4 exercícios); até 2020 a DRE apresenta SG&A agregado, abaixo do mínimo de 5 anos com IS&M calculável","DRE 2018-2019: linha única 'Selling, general and administrative'"
+CRM,1108524,"Salesforce, Inc.",NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,"M&A relevante sem 5 anos completos: aquisição da Slack concluída em jul/2021 (~USD 27,7 bi)","Salesforce, comunicado de 21/07/2021"
+DOMO,1505952,"Huckleberry.ai, Inc.",Nasdaq,7372,Services-Prepackaged Software,6.0,"2019, 2020, 2021, 2022, 2023, 2024",alto,nao,Market cap < USD 500M: capitalização caiu para ~USD 200-400M em 2023-2024,
+EPAM,1352010,"EPAM Systems, Inc.",NYSE,7371,Services-Computer Programming Services,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,Receita assinatura < 60%: empresa de serviços de TI (time-&-material),
+EVBG,1437352,"EVERBRIDGE, INC.",sem listagem atual (verificar NYSE/Nasdaq no período),7372,Services-Prepackaged Software,8.0,"2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,nao,Market cap < USD 500M: capitalização no fim de 2016 (ano do IPO) abaixo do limiar,ações em circulação x preço de fechamento em 30/12/2016
+FSLY,1517413,"Fastly, Inc.",Nasdaq,7372,Services-Prepackaged Software,5.0,"2020, 2021, 2022, 2023, 2024",medio,nao,Receita assinatura < 60%: modelo usage-based (cobrança por tráfego/consumo),
+GWRE,1528396,"Guidewire Software, Inc.",NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,nao,Receita assinatura < 60%: modelo de licença perpetua predominante até 2021,
+INTU,896878,INTUIT INC.,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,nao,M&A relevante sem 5 anos completos: Credit Karma set/2020 (~USD 7.1B) e Mailchimp nov/2021 (~USD 12B),
+LPSN,1102993,LIVEPERSON INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,nao,Market cap < USD 500M: capitalização caiu para ~USD 50-100M após 2022,
+MANH,1056696,MANHATTAN ASSOCIATES INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,Receita assinatura < 60%: cloud subscription ~37% + manutenção ~20% = ~57%,
+MSFT,789019,MICROSOFT CORP,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,M&A relevante sem 5 anos completos: Activision Blizzard out/2023 (~USD 69B),
+OKTA,1660134,"Okta, Inc.",Nasdaq,7372,Services-Prepackaged Software,7.0,"2018, 2019, 2020, 2021, 2022, 2023, 2024",alto,nao,M&A relevante sem 5 anos completos: aquisição Auth0 mai/2021 (~USD 6.5B),
+ORCL,1341439,ORACLE CORP,NYSE/NYSE,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",baixo,nao,M&A relevante sem 5 anos completos: aquisição Cerner jun/2022 (~USD 28B),
+VRNS,1361113,VARONIS SYSTEMS INC,Nasdaq,7372,Services-Prepackaged Software,10.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024",medio,nao,Receita assinatura < 60%: modelo perpetual license vigente até 2021,

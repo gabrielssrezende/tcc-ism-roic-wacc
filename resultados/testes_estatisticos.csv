@@ -1,0 +1,23 @@
+﻿bloco,teste,n,estatistica,valor,p_valor,resultado,observacao
+Pressuposto,Shapiro-Wilk (spread),209,W,0.6677,4.9566658966740717e-20,Rejeita H0,H0: normalidade
+Pressuposto,Shapiro-Wilk (IS&M),209,W,0.9321,2.8376361716160806e-08,Rejeita H0,H0: normalidade
+H1,Mann-Whitney: Alto vs. Baixo IS&M,73 / 136,U,1011.0,2.483083530521047e-21,Rejeita H0,mediana Alto = -0.2188; mediana Baixo = 0.0452; correlação bisserial de postos = 0.796
+H2,Spearman: IS&M × spread (amostra completa),209,rho,-0.7808,3.615912942424409e-44,Rejeita H0,
+H3,Spearman: ano × spread (Alto IS&M),73,rho,0.2099,0.07476042603844696,Não rejeita H0,
+Por grupo,Spearman: IS&M × spread (Alto IS&M),73,rho,-0.5068,4.761043659475508e-06,Rejeita H0,
+Por grupo,Spearman: IS&M × spread (Baixo IS&M),136,rho,-0.5374,1.520701402003126e-11,Rejeita H0,
+Por grupo,Spearman: ano × spread (Baixo IS&M),136,rho,0.2152,0.011868162825143311,Rejeita H0,
+Robustez,Pearson: IS&M × spread,209,r,-0.5475,9.704480542418754e-18,Rejeita H0,
+Robustez,Spearman: IS&M_t × spread_t+1,184,rho,-0.7567,2.0022982582495722e-35,Rejeita H0,
+Robustez,Spearman: IS&M_t × spread_t+2,159,rho,-0.7315,6.695088787210907e-28,Rejeita H0,
+Robustez,Spearman: IS&M_t × spread_t+3,134,rho,-0.6962,9.749736855650332e-21,Rejeita H0,
+Robustez,Spearman: IS&M × ROIC antes de S&M,209,rho,0.0125,0.8577440794861807,Não rejeita H0,mediana Alto = 0.4622; mediana Baixo = 0.3441
+Robustez k=3,Kruskal-Wallis (Alto / Médio / Baixo),51 / 48 / 110,H,134.4825,6.273343035563612e-30,Rejeita H0,
+Robustez k=3,Mann-Whitney: Alto vs. Médio (Bonferroni),51 / 48,U,691.0,0.0005784519765919,Rejeita H0,p sem ajuste = 0.000193
+Robustez k=3,Mann-Whitney: Alto vs. Baixo (Bonferroni),51 / 110,U,108.0,3.433833705116776e-22,Rejeita H0,p sem ajuste = 0.000000
+Robustez k=3,Mann-Whitney: Médio vs. Baixo (Bonferroni),48 / 110,U,369.0,2.745641829797848e-17,Rejeita H0,p sem ajuste = 0.000000
+Robustez M&A,H1 sem PTC/BLKB/PRGS: Mann-Whitney Alto vs. Baixo,73 / 106,U,775.0,1.0848563180073614e-19,Rejeita H0,mediana Alto = -0.2188; mediana Baixo = 0.0758
+Robustez M&A,H2 sem PTC/BLKB/PRGS: Spearman IS&M × spread,179,rho,-0.814,1.2673600816277012e-43,Rejeita H0,
+Robustez intraempresa,Spearman: ano × spread centrado na empresa (Alto IS&M),73,rho,0.5933,3.181863613444306e-08,Rejeita H0,spread menos a mediana do spread da própria empresa
+Robustez intraempresa,Spearman: ano × spread centrado na empresa (Baixo IS&M),136,rho,0.5005,5.478086951291771e-10,Rejeita H0,spread menos a mediana do spread da própria empresa
+Complementar,"Spearman: ano × IS&M (Alto IS&M, obs. coletadas)",105,rho,-0.447,1.7496265521338476e-06,Rejeita H0,

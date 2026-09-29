@@ -1,0 +1,11 @@
+ticker,ano,fim_exercicio,variavel,valor,descricao,fonte
+HUBS,2022,2022-12-31,divida_total,454227000,"Convertible senior notes, net (2025 Notes)","10-K FY2023, Consolidated Balance Sheets (acc. 0000950170-24-015277)"
+HUBS,2023,2023-12-31,divida_total,456206000,"Convertible senior notes, net (2025 Notes)","10-K FY2023, Consolidated Balance Sheets (acc. 0000950170-24-015277)"
+WDAY,2017,2017-01-31,divida_total,534423000,"Convertible senior notes, net (2017 e 2020 Notes)","10-K FY2018, Consolidated Balance Sheets, coluna 31/01/2017 (acc. 0001327811-18-000009)"
+DT,2019,2019-03-31,juros,69845000,"Interest expense, net","Consolidated Statements of Operations, resultados do exercício fiscal 2020 (8-K de 12/05/2020)"
+DT,2020,2020-03-31,juros,45397000,"Interest expense, net","Consolidated Statements of Operations, resultados do exercício fiscal 2020 (8-K de 12/05/2020)"
+DT,2021,2021-03-31,juros,14205000,"Interest expense, net","Consolidated Statements of Operations, resultados do exercício fiscal 2021 (8-K de 12/05/2021)"
+PAYC,2021,2021-12-31,juros,0,"Interest expense (—)","Consolidated Statements of Income, resultados de 2022 (8-K de fev/2023)"
+PCTY,2020,2020-06-30,juros,695000,"Interest expense","Consolidated Statements of Operations, resultados do exercício fiscal 2020 (8-K de ago/2020)"
+NOW,2023,2023-12-31,juros,23000000,"Estimativa: taxa efetiva de 1,53% das 2030 Notes x principal de USD 1,5 bi (despesa de juros não divulgada em linha própria)","10-K/10-Q, nota de dívida (2030 Notes); juros pagos de USD 23 mi"
+NOW,2024,2024-12-31,juros,23000000,"Estimativa: taxa efetiva de 1,53% das 2030 Notes x principal de USD 1,5 bi (despesa de juros não divulgada em linha própria)","10-K/10-Q, nota de dívida (2030 Notes); juros pagos de USD 23 mi"
