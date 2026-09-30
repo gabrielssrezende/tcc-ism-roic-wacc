@@ -4,6 +4,13 @@
 Gera as Tabelas 2, 3, 5 e 6 (CSV) e as Figuras 1 a 3 (PNG, 300 dpi).
 A Tabela 4 é o próprio resultados/testes_estatisticos.csv.
 
+As Figuras 2 e 3 seguem os critérios de formatação de gráficos do Manual de
+Normas do MBA USP/Esalq: sem linhas de grade, sem borda, sem preenchimento e sem
+título do gráfico; eixos em linha preta de 1,5 pt; títulos dos eixos em Arial
+(ou Liberation Sans, métrica idêntica) tamanho 11 ou menor, na cor preta; figuras
+com mais de um painel identificadas por letra maiúscula (A, B) no canto superior
+esquerdo de cada painel.
+
 Entradas: dados/amostra_candidatas_expandida.csv, dados/dados_com_cluster.csv,
           resultados/validacao_kmeans.csv, resultados/tendencia_por_empresa.csv
 Saídas:   resultados/tabelas/*.csv, resultados/figuras/*.png
@@ -19,10 +26,16 @@ import pandas as pd
 
 from config import AMOSTRA_CANDIDATAS, DADOS_CLUSTER, RESULTADOS, TABELAS, FIGURAS
 
-AZUL, LARANJA, CINZA, TINTA, SUAVE = "#2a78d6", "#eb6834", "#9a9893", "#0b0b0b", "#52514e"
+AZUL, LARANJA, CINZA, TINTA, SUAVE, PRETO = "#2a78d6", "#eb6834", "#9a9893", "#0b0b0b", "#52514e", "#000000"
 plt.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
-                     "font.size": 9, "axes.edgecolor": SUAVE, "xtick.color": SUAVE, "ytick.color": SUAVE,
-                     "axes.spines.top": False, "axes.spines.right": False})
+                     "font.size": 9, "text.color": PRETO, "axes.labelcolor": PRETO,
+                     # eixos em linha preta de 1,5 pt (Manual de Normas, Tabela 8)
+                     "axes.edgecolor": PRETO, "axes.linewidth": 1.5,
+                     "xtick.color": PRETO, "ytick.color": PRETO,
+                     "xtick.major.width": 1.5, "ytick.major.width": 1.5,
+                     # sem borda, sem preenchimento e sem linhas de grade
+                     "axes.spines.top": False, "axes.spines.right": False,
+                     "axes.facecolor": "none", "figure.facecolor": "white", "axes.grid": False})
 fmt = lambda x, dec=0: f"{x:.{dec}f}".replace(".", ",").replace("-", "−")
 
 df = pd.read_csv(DADOS_CLUSTER)
@@ -65,7 +78,7 @@ t6 = t6.join(tend[["rho_ano_spread", "p_valor"]], on="ticker")
 t6.sort_values(["grupo", "ism_medio"], ascending=[True, False]).to_csv(
     TABELAS / "tabela6_perfil_empresas.csv", index=False, encoding="utf-8-sig")
 
-# Figura 1 (Sankey)
+# Figura 1 (Sankey — fluxograma do processo de seleção, não é gráfico de dados)
 cand = pd.read_csv(AMOSTRA_CANDIDATAS)
 exc = cand[cand["incluir"] == "nao"]["motivo"].fillna("")
 n_assin = exc.str.contains("assinatura").sum()
@@ -111,23 +124,26 @@ fluxo(X1 + 1.8, y0, X2, 0, h_in, CINZA); no(X2, 0, h_in, CINZA)
 ax.text(X2 + 3, h_in / 2, f"−{n_ins} obs.: dados insuficientes", va="center", fontsize=7.3, color=SUAVE)
 plt.savefig(FIGURAS / "figura1_selecao_amostra.png", dpi=300, bbox_inches="tight", facecolor="white"); plt.close()
 
-# Figura 2 (silhueta e cotovelo)
+# Figura 2 (silhueta e cotovelo) — painéis A e B, sem título e sem grade
 val = pd.read_csv(RESULTADOS / "validacao_kmeans.csv")
 fig, axs = plt.subplots(1, 2, figsize=(6.3, 2.4))
-for a, col, titulo, dec in [(axs[0], "silhueta", "Índice de silhueta", 2),
-                            (axs[1], "inercia", "Inércia (soma dos quadrados intragrupo)", 3)]:
-    a.plot(val["k"], val[col], color=AZUL, lw=2, marker="o", ms=6, mec="white", mew=1.5)
-    a.plot([val["k"].iloc[0]], [val[col].iloc[0]], "o", color=LARANJA, ms=8, mec="white", mew=1.5)
+for a, col, rot, dec, letra in [(axs[0], "silhueta", "Índice de silhueta", 2, "A"),
+                                (axs[1], "inercia", "Inércia", 3, "B")]:
+    a.plot(val["k"], val[col], color=AZUL, lw=2, marker="o", ms=6, mec="white", mew=1.5, zorder=3)
+    a.plot([val["k"].iloc[0]], [val[col].iloc[0]], "o", color=LARANJA, ms=8, mec="white", mew=1.5, zorder=4)
     for k, y in zip(val["k"], val[col]):
-        a.annotate(fmt(y, dec), (k, y), textcoords="offset points", xytext=(0, 7), ha="center", fontsize=7.5, color=TINTA)
-    a.set_xticks(val["k"]); a.set_xlabel("Número de grupos (k)"); a.set_title(titulo, fontsize=8.5, loc="left", color=TINTA)
-    a.grid(axis="y", color="#e6e5e1", lw=.6); a.set_axisbelow(True); a.margins(y=.2)
+        a.annotate(fmt(y, dec), (k, y), textcoords="offset points", xytext=(0, 7), ha="center", fontsize=8)
+    a.set_xticks(val["k"]); a.set_xlim(val["k"].min() - .4, val["k"].max() + .4)
+    a.set_xlabel("Número de grupos (k)", fontsize=9); a.set_ylabel(rot, fontsize=9)
+    a.margins(y=.22)
     a.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p, dec=dec: fmt(x, dec)))
-axs[0].axhline(.5, color=CINZA, lw=1, ls="--")
-axs[0].text(2.1, .505, "limiar 0,50", fontsize=7, color=SUAVE, ha="left", va="bottom")
-plt.tight_layout(); plt.savefig(FIGURAS / "figura2_validacao_kmeans.png", dpi=300, facecolor="white"); plt.close()
+    a.text(-0.28, 1.04, letra, transform=a.transAxes, fontsize=11, fontweight="bold", va="bottom", ha="left")
+axs[0].axhline(.5, color=CINZA, lw=1, ls="--", zorder=1)
+axs[0].text(2.1, .505, "limiar 0,50", fontsize=7.5, color=SUAVE, ha="left", va="bottom")
+plt.tight_layout(w_pad=2.5)
+plt.savefig(FIGURAS / "figura2_validacao_kmeans.png", dpi=300); plt.close()
 
-# Figura 3 (trajetória)
+# Figura 3 (trajetória) — sem grade, eixos pretos de 1,5 pt, título do eixo x
 fig, ax = plt.subplots(figsize=(6.3, 3.4))
 for t, x in v.groupby("ticker"):
     x = x.sort_values("ano")
@@ -135,11 +151,12 @@ for t, x in v.groupby("ticker"):
 med = v.groupby(["grupo", "ano"])["spread"].median().unstack(0) * 100
 for g, c in [("Alto", LARANJA), ("Baixo", AZUL)]:
     ax.plot(med.index, med[g], color=c, lw=2.4, marker="o", ms=5, mec="white", mew=1.2, label=f"{g} IS&M (mediana)")
-ax.axhline(0, color=SUAVE, lw=.8); ax.set_ylim(-160, 100); ax.set_xticks(range(2015, 2025))
-ax.set_ylabel("Spread ROIC–WACC (%)"); ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: fmt(x)))
-ax.grid(axis="y", color="#e6e5e1", lw=.6); ax.set_axisbelow(True)
+ax.axhline(0, color=SUAVE, lw=.8)
+ax.set_ylim(-160, 100); ax.set_xticks(range(2015, 2025)); ax.set_xlim(2014.6, 2024.4)
+ax.set_xlabel("Ano", fontsize=9); ax.set_ylabel("Spread ROIC–WACC (%)", fontsize=9)
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: fmt(x)))
 ax.legend(frameon=False, fontsize=8, loc="upper left", ncol=2)
-plt.tight_layout(); plt.savefig(FIGURAS / "figura3_trajetoria_spread.png", dpi=300, facecolor="white"); plt.close()
+plt.tight_layout(); plt.savefig(FIGURAS / "figura3_trajetoria_spread.png", dpi=300); plt.close()
 
 print(f"Tabelas salvas em: {TABELAS}")
 print(f"Figuras salvas em: {FIGURAS}")
